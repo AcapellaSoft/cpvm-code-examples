@@ -1,0 +1,21 @@
+[
+  {
+    "active": true,
+    "httpMethod": "POST",
+    "pathPattern": "/my/imageCenterMass",
+    "arguments": [
+      { "name": "imagepath", "placement": "Query" }
+    ],
+    "handler": {
+      "fragment": "pavlovma007/cli-launcher/02BC4844:imageCenterMass.py",
+      "logging": {
+        "redirections": {
+          "stdout": {
+            "id": "log",
+            "scope": "FRAGMENT"
+          }
+        }
+      }
+    }
+  }
+]
