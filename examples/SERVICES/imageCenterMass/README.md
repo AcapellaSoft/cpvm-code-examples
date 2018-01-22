@@ -40,4 +40,4 @@ $ ./red_button.sh
 {"cx": 367.97130998571424, "cy": 256.8033542126325}m
 ```
 
-
+[link to source](https://github.com/AcapellaSoft/cpvm-code-examples/blob/master/examples/SERVICES/imageCenterMass/service/imageCenterMass.py)
