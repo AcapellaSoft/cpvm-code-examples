@@ -5,32 +5,32 @@
 3. run fragment in cpvm cloud. fragment put to AcapellaDB in path linked to transaction id results images. and commit transaction.
 4. Client code load from AcapellaDb result images
 
-original file 
+Original file 
 
 | one | two |
 | --- | --- |
 |![](telo.jpg)  |![](original.jpg) |
 
 
-
-result, **auto** mode
-
-| one | two |
-| --- | --- |
-|![](auto.jpg)  |![](orig_auto.jpg) |
-
 result, **tight** mode
 
-| one | two |
+| one, tight | two, tight |
 | --- | --- |
 |![](tight.jpg) |![](orig_tight.jpg) |
 
 
 result **wide** mode 
 
-| one | two |
+| one, wide | two, wide |
 | --- | --- |
 |![](wide.jpg)  |![](orig_wide.jpg) |
+
+result, **auto** mode
+
+| one, auto | two, auto |
+| --- | --- |
+|![](auto.jpg)  |![](orig_auto.jpg) |
+
 
 ```bash
 $cat ./experiment.sh
