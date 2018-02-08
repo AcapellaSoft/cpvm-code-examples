@@ -6,6 +6,7 @@
 4. Client code load from AcapellaDb result images
 
 original file 
+
 ![](telo.jpg)
 
 result, **auto** mode
@@ -22,7 +23,7 @@ result **wide** mode
 ![](wide.jpg)
 
 ```bash
-$cat ./experimant.sh
+$cat ./experiment.sh
 ```
 
 ```bash 
