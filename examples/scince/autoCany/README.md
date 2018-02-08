@@ -9,7 +9,7 @@ original file
 
 | one | two |
 | --- | --- |
-|![](telo.jpg)  | ![](orginal.jpg) |
+|![](telo.jpg)  |![](original.jpg) |
 
 
 
@@ -17,20 +17,20 @@ result, **auto** mode
 
 | one | two |
 | --- | --- |
-|![](auto.jpg)  | ![](org_auto.jpg) |
+|![](auto.jpg)  |![](orig_auto.jpg) |
 
 result, **tight** mode
 
 | one | two |
 | --- | --- |
-|![](tight.jpg) | ![](org_tight.jpg)|
+|![](tight.jpg) |![](orig_tight.jpg) |
 
 
 result **wide** mode 
 
 | one | two |
 | --- | --- |
-|![](wide.jpg)  | ![](org_wide.jpg) |
+|![](wide.jpg)  |![](orig_wide.jpg) |
 
 ```bash
 $cat ./experiment.sh
