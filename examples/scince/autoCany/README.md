@@ -7,20 +7,29 @@
 
 original file 
 
-![](telo.jpg)
++---------------+--+
+|![](telo.jpg)  |  |
++---------------+--+
+
 
 result, **auto** mode
 
-![](auto.jpg)
++---------------+--+
+|![](auto.jpg)  |  |
++---------------+--+
 
 result, **tight** mode
 
-![](tight.jpg)
++---------------+--+
+|![](tight.jpg) | |
++---------------+--+
 
 
 result **wide** mode 
 
-![](wide.jpg)
++---------------+--+
+|![](wide.jpg)  |  |
++---------------+--+
 
 ```bash
 $cat ./experiment.sh
