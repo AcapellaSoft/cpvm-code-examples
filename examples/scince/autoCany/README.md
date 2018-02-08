@@ -1,4 +1,4 @@
-# find cany of image , use auto pareters 
+# find cany of image , use auto parameters 
 
 1. get transaction id 
 2. load image to AcapellaDB in same primary path , but in specified transaction
