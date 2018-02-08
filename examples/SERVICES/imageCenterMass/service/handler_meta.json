@@ -4,10 +4,12 @@
     "httpMethod": "POST",
     "pathPattern": "/my/imageCenterMass",
     "arguments": [
-      { "name": "imagepath", "placement": "Query" }
+      { "name": "imagepath", "placement": "Query" , "optional": true }, 
+      { "name": "imagebase64", "placement": "Body", "optional": true  }
+      
     ],
     "handler": {
-      "fragment": "pavlovma007/cli-launcher/02BC4844:imageCenterMass.py",
+      "fragment": "pavlovma007/cli-launcher/8658EFD0:imageCenterMass.py",
       "logging": {
         "redirections": {
           "stdout": {

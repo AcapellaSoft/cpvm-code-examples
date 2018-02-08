@@ -6,4 +6,8 @@
 URL="n6-img-fp.akamaized.net/free-icon/crescent-moon_318-35328.jpg"
 #URL="n6-img-fp.akamaized.net/free-icon/horse-ride_318-104190.jpg"
 
-curl -v -X POST http://api.acapella.ru:5678/io/pavlovma007/my/imageCenterMass?imagepath=$URL
+# Image by Content
+curl -v -X POST http://api.acapella.ru:5678/io/pavlovma007/my/imageCenterMass -H "Content-Type: application/octet-stream" --data "@luna.png.b64"
+
+# Image by URL 
+curl -v -X POST http://api.acapella.ru:5678/io/pavlovma007/my/imageCenterMass?imagepath=$URL -H "Content-Type: application/octet-stream" 

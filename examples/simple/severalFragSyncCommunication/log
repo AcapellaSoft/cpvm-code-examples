@@ -1,17 +1,17 @@
 matches with existing snapshot: pavlovma007/cli-launcher/84B91466
-CPVM 1.2.807 (6891dc74a7ef565aa44341ce3ed1e03b92ce626b) debug mode
+CPVM 1.2.811 (ed795884502b99f9142b27f13c3b0289ff827697) debug mode
 using 'transactional' preset
 start fragment: pavlovma007/cli-launcher/84B91466:getimageFromMock.py
-transaction started: f3497846c4b94b2f
+transaction started: 1306ff43ed8e43cc
 transaction completed
 
 execution time:
-    without overheads (worker):  521 ms
-    total (worker):              521 ms
-    total (node):                528 ms
+    without overheads (worker):  81 ms
+    total (worker):              81 ms
+    total (node):                88 ms
 transaction timestamps: 
-    start:          11:15:45.011000 [2018-01-22]
-    end:            11:15:45.546000 [2018-01-22]
+    start:          16:28:42.190000 [2018-02-06]
+    end:            16:28:42.297000 [2018-02-06]
 counters: 
     total conflicts:   0
     total restarts:    0
@@ -25,9 +25,9 @@ TVM traffic:
 log:
 
 ap= ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'args', 'await_all', 'call', 'call_async', 'commit', 'http', 'new_io', 'transaction', 'tvm_get', 'tvm_get_bool', 'tvm_get_number', 'tvm_length', 'tvm_new', 'tvm_set', 'tvm_table_get', 'tvm_table_get_bool', 'tvm_table_get_number', 'tvm_table_set']
-b'f3497846c4b94b2f_val_0'
+b'1306ff43ed8e43cc_val_0'
 i am _mock_base64Image.lua
-b'f3497846c4b94b2f_val_0'
+b'1306ff43ed8e43cc_val_0'
 base64
  iVBORw0KGgoAAAANSUhEUgAAAPYAAADvCAIAAABOqb7MAAAAA3NCSVQICAjb4U/gAAAAEHRFWHRT
 b2Z0d2FyZQBTaHV0dGVyY4LQCQAAIABJREFUeNrtfWmMXNeV3jn3vqXW3heyF3ZzaW6yZA8lUTYt

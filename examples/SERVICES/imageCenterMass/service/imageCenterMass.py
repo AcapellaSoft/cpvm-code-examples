@@ -1,10 +1,26 @@
+from PIL import Image   # sudo pip3 install image
+import numpy as np
 
-def internalWork(URL): 
+def pilImageFromURL(url):
+	import urllib, requests
+	from io import BytesIO
+	response = requests.get(url)
+	im = Image.open(BytesIO(response.content))
+	return im
+
+def pilImageFromBase64(imageb64):
+	import base64 
+	decoded = base64.decodebytes(imageb64.encode('ascii'))
+	print(decoded)
+	import io
+	im = Image.open(io.BytesIO(decoded))
+	print(im)
+	return im
+
+
+def internalWork(im):  #URL
 	
-	from PIL import Image   # sudo pip3 install image
-	import numpy as np
-
-	im = None
+	#im = None
 	#im = Image.open('image.jpg')
 	# OR 
 	def pilImageFromURL(url):
@@ -23,7 +39,7 @@ def internalWork(URL):
 		print(im)
 		return im
 
-	im = pilImageFromURL(URL)
+	#im = pilImageFromURL(URL)
 
 	immat = im.load()
 	(X, Y) = im.size
@@ -49,12 +65,29 @@ def internalWork(URL):
 def http_response():
 	import ap 
 	import json
+	
 	url = 'https://'+ap.args['imagepath']
 	print('DEBUG imagepath=', url )
-	Ra = internalWork(url)
+	
+	# Get image by conent OR by url 
+	im = None
+	if 'imagebase64' in ap.args:
+		imagebase64=ap.args['imagebase64'] # optional
+		im = pilImageFromBase64(imagebase64)
+		xdebug = 'imagebase64'
+	else:
+		im = pilImageFromURL(url)
+		xdebug = 'url'
+		
+	
+	# handle image
+	Ra = internalWork(im)
 	obj_s = json.dumps({'cx':Ra[0], 'cy':Ra[1]})
 	headers = {
 		"imagepath-v": ap.args['imagepath']
+		,"trid": ap.transaction.id
+		,"x-debug-imageSource": xdebug
+#		,"imageb64": imagebase64
 	}
 	ap.http.respond(201, obj_s, headers)
 

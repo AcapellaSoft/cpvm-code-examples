@@ -1,5 +1,5 @@
 #!/bin/bash
 
 curl -X POST -H "Content-Type: application/json" \
-    -d "@handler_meta.json" -u pavlovma007:A5333EE5844AA9F0CE144D7352F507817C58D835EA7F894C98D9103B416C337A \
+    -d "@handler_meta.json" -u pavlovma007:7FC808C385EE960D992F1F32219DB8ED2568979E4DCCD108BEDE91920AC62189 \
     http://api.acapella.ru:5678/http/services/handlers/register
