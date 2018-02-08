@@ -1,4 +1,4 @@
-##  one fragment call other as *mock*
+##  one fragment call another as *mock*
 
 simple example of sync call and usetvm as buffer between fragments 
 
