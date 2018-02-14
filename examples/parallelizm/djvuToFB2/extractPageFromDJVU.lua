@@ -17,10 +17,27 @@ local function extractPageFromDJVU(path, pagenum, image)
 end 
 
 local function extractTextFromImage(imagepath, lang)
-	local args = imagepath..' stdout -l '..lang
+	local args = imagepath..' '..imagepath..'.txt '..' -l '..lang
 	local text = exec('tesseract', args)
-	local text = ap.tvm_get(text)
+	--local text = ap.tvm_get(text)
+
+	local open = io.open
+
+	local function read_file(path)
+		local file = open(path, "rb") -- r read mode and b binary mode
+		if not file then return nil end
+		local content = file:read "*a" -- *a or *all reads the whole file
+		file:close()
+		return content
+	end
+	
+	--print(imagepath..'.txt')
+	text = read_file(imagepath..'.txt')
 	--print(text)
+	
+	exec('rm', imagepath)
+	exec('rm', imagepath..'.txt')
+	
 	return text
 end
 	
@@ -29,4 +46,5 @@ extractPageFromDJVU('"/home/admin/Erlykin_L.A._Poslushnyy_metall-1974.djvu"', 90
 
 text = extractTextFromImage("/tmp/page090.tiff",'rus')
 p(text)
+
 
