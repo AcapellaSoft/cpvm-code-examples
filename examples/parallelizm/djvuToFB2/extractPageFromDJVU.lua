@@ -17,7 +17,7 @@ local function extractPageFromDJVU(path, pagenum, image)
 end 
 
 local function extractTextFromImage(imagepath, lang)
-	local args = imagepath..' '..imagepath..'.txt '..' -l '..lang
+	local args = imagepath..' '..imagepath..' -l '..lang
 	local text = exec('tesseract', args)
 	--local text = ap.tvm_get(text)
 
@@ -35,8 +35,8 @@ local function extractTextFromImage(imagepath, lang)
 	text = read_file(imagepath..'.txt')
 	--print(text)
 	
-	exec('rm', imagepath)
-	exec('rm', imagepath..'.txt')
+	exec('rm', ' -f '..imagepath)
+	exec('rm', ' -f '..imagepath..'.txt')
 	
 	return text
 end
